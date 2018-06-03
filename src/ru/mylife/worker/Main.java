@@ -15,13 +15,12 @@ public class Main {
         Random rand = new Random();
         Worker[] worker = new Worker[5];
         for (int i = 0; i < worker.length; i++) {
-            worker[i] = new Worker();
-            worker[i].setFio(fio[rand.nextInt(5)]);
-            worker[i].setPosition(position[rand.nextInt(5)]);
-            worker[i].setEmail(email[rand.nextInt(5)]);
-            worker[i].setPhone(phone[rand.nextInt(5)]);
-            worker[i].setSalary(salary[rand.nextInt(5)]);
-            worker[i].setAge(age[rand.nextInt(5)]);
+            worker[i] = new Worker(fio[rand.nextInt(5)],
+                    position[rand.nextInt(5)],
+                    email[rand.nextInt(5)],
+                    phone[rand.nextInt(5)],
+                    salary[rand.nextInt(5)],
+                    age[rand.nextInt(5)]);
         }
         for (Worker t: worker) {
             t.printWorker();
